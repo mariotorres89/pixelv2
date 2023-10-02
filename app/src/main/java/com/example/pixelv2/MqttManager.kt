@@ -9,7 +9,7 @@ import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence
 class MqttManager {
 
     private val brokerUrl = "tcp://cpshealthcare.cl:3883"
-    private val clientId = "pixel-watch-client-sensors-1"
+    private val clientId = "pixel-watch-client-sensors-0"
     private val mqttClient = MqttClient(brokerUrl, clientId, MemoryPersistence())
     val options = MqttConnectOptions().apply {
         userName = "mqttUser"
