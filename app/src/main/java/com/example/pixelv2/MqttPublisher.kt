@@ -55,7 +55,7 @@ class MqttPublisher(
                                     when (sensorData.sensor) {
                                         "android.sensor.accelerometer" -> {
                                             mapOf(
-                                                "test_id" to -1,
+                                                "test_id" to 1,
                                                 "timestamp" to sensorData.timestamp,
                                                 "values" to mapOf(
                                                     "accel_x" to sensorData.measures[0],
@@ -66,7 +66,7 @@ class MqttPublisher(
                                         }
                                         "android.sensor.gyroscope" -> {
                                             mapOf(
-                                                "test_id" to -1,
+                                                "test_id" to 1,
                                                 "timestamp" to sensorData.timestamp,
                                                 "values" to mapOf(
                                                     "gyro_x" to sensorData.measures[0],
@@ -77,7 +77,7 @@ class MqttPublisher(
                                         }
                                         "battery" -> {
                                             mapOf(
-                                                "test_id" to -1,
+                                                "test_id" to 1,
                                                 "timestamp" to sensorData.timestamp,
                                                 "values" to mapOf(
                                                     "battery" to sensorData.measures[0]
@@ -86,7 +86,7 @@ class MqttPublisher(
                                         }
                                         "android.sensor.heart_rate" -> {
                                             mapOf(
-                                                "test_id" to -1,
+                                                "test_id" to 1,
                                                 "timestamp" to sensorData.timestamp,
                                                 "values" to mapOf(
                                                     "heart_rate" to sensorData.measures[0]

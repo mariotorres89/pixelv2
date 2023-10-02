@@ -151,7 +151,7 @@ class Classifier(private val sensorDataDao: SensorDataDao, private val assetMana
 
         // Broker and client details
         val brokerUrl = "tcp://cpshealthcare.cl:3883"
-        val clientId = "pixel-watch-client-classifier"
+        val clientId = "pixel-watch-client-classifier-1"
         val mqttClient = MqttClient(brokerUrl, clientId, MemoryPersistence())
 
         val options = MqttConnectOptions().apply {
@@ -181,7 +181,7 @@ class Classifier(private val sensorDataDao: SensorDataDao, private val assetMana
         }
 
         val mainJson = JSONObject().apply {
-            put("test_id", 0)
+            put("test_id", 1)
             put("timestamp", currentTime)
             put("values", JSONObject().apply {
                 put("features", featuresJson)
